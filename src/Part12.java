@@ -1,7 +1,6 @@
 import Util.Navigation;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class Part12 {
         BufferedReader br = new BufferedReader(new FileReader(filename));
         List<Navigation> navigations = new ArrayList<>();
         String curr;
-        while((curr = br.readLine()) != null) {
+        while ((curr = br.readLine()) != null) {
             char c = curr.charAt(0);
             int value = Integer.parseInt(curr.substring(1));
             navigations.add(new Navigation(c, value));
@@ -36,10 +35,10 @@ public class Part12 {
         int east = 0;
         int north = 0;
         int angle = 0;
-        for(Navigation nav : navs) {
+        for (Navigation nav : navs) {
             char currChar = nav.getAction();
             int currValue = nav.getValue();
-            switch(currChar) {
+            switch (currChar) {
                 case 'N':
                     north += currValue;
                     break;
@@ -75,10 +74,10 @@ public class Part12 {
         int shipEast = 0;
         int shipNorth = 0;
         int wayAngle = 0;
-        for(Navigation nav : navs) {
+        for (Navigation nav : navs) {
             char currChar = nav.getAction();
             int currValue = nav.getValue();
-            switch(currChar) {
+            switch (currChar) {
                 case 'N':
                     wayNorth += currValue;
                     break;
