@@ -15,6 +15,14 @@ public class ReadInputUtil {
         return numbers;
     }
 
+    public static List<String> readToString(Scanner sc){
+        ArrayList<String> strings = new ArrayList<>();
+        while(sc.hasNextLine()){
+            strings.add(sc.nextLine());
+        }
+        return strings;
+    }
+
     public static char[][] readToGrid(String filename) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filename));
         BufferedReader br2 = new BufferedReader(new FileReader(filename));
